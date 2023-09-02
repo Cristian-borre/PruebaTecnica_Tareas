@@ -1,0 +1,19 @@
+<button (click)="openModal()" class="bg-green-500 py-2 px-5 ml-6 rounded-md text-white hover:bg-green-600">Nueva tarea</button>
+<div *ngIf="isOpen" class="fixed inset-0 flex items-center justify-center z-50">
+    <div class="fixed inset-0 bg-black opacity-50"></div>
+    <form class="bg-white p-8 rounded-lg shadow-lg relative z-10">
+        <div class="text-center font-serif text-2xl mb-4">Agregar tarea</div>
+        <div class="mb-4">
+            <div class="mb-4">
+                <app-input label="Titulo" type="text" id="InputTitulo"></app-input>
+            </div>
+            <div class="mb-4">
+                <app-input label="Descripcion" type="text" id="InputDescripcion"></app-input>
+            </div>
+        </div>
+        <div>
+            <button (click)="closeModal()" class="mr-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4">Cerrar</button>
+            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4">Guardar</button>
+        </div>
+    </form>
+</div>

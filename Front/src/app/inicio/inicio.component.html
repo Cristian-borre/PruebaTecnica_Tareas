@@ -1,32 +1,13 @@
-<div class="h-screen">
+<div class="h-screen overflow-hidden">
     <app-nav></app-nav>
-    <div class="p-6">
-        <button class="m-4 bg-green-500 py-2 px-5 rounded-md text-white hover:bg-green-600">Nueva Tarea</button>
-        <table class="relative top-5 w-full table-fixed shadow">
-            <thead class="bg-blue-400 text-white h-10">
-                <tr>
-                    <th class="rounded-tl-md">Song</th>
-                    <th class="border">Artist</th>
-                    <th class="rounded-tr-md">Year</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="border h-10 px-4">The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-                    <td class="border h-10 px-4">Malcolm Lockyer</td>
-                    <td class="border h-10 px-4">1961</td>
-                </tr>
-                <tr>
-                    <td class="border h-10 px-4">Witchy Woman</td>
-                    <td class="border h-10 px-4">The Eagles</td>
-                    <td class="border h-10 px-4">1972</td>
-                </tr>
-                <tr>
-                    <td class="border h-10 px-4">Shining Star</td>
-                    <td class="border h-10 px-4">Earth, Wind, and Fire</td>
-                    <td class="border h-10 px-4">1975</td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="py-3 px-4 h-full overflow-auto">
+        <app-modal></app-modal>
+        <div class="mt-4 overflow-auto w-full grid place-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+            <app-card titulo="Api back" estado="pendiente" descripcion="Crear api back con django rest framework y jwt."></app-card>
+            <app-card titulo="Vista perfil" estado="pendiente" descripcion="Crear la vista del perfil de los usuarios."></app-card>
+            <app-card titulo="Crear respositorio" estado="pendiente" descripcion="Crear repositorio donde podras subir el proyecto."></app-card>
+            <app-card titulo="Documentar codigo" estado="pendiente" descripcion="Documentar el codigo para mas entendimiento hacia otro desarrollador."></app-card>
+            <app-card titulo="Crear modales" estado="pendiente" descripcion="Crear modales el formulario de registro de tareas."></app-card>
+        </div>
     </div>
 </div>

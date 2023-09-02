@@ -11,10 +11,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { NavComponent } from './nav/nav.component';
 import { InputComponent } from './input/input.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+import { PerfilComponent } from './perfil/perfil.component';
+import { CardComponent } from './card/card.component';
+import { ModalComponent } from './modal/modal.component';
+
 //Rutas
 const routes: Routes = [
   {path:'', component:LoginComponent},
   {path:'register', component:RegisterComponent},
+  {path:'inicio', component:InicioComponent},
+  {path:'perfil', component:PerfilComponent},
 ]
 
 @NgModule({
@@ -24,12 +31,16 @@ const routes: Routes = [
     RegisterComponent,
     InicioComponent,
     NavComponent,
-    InputComponent
+    InputComponent,
+    PerfilComponent,
+    CardComponent,
+    ModalComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   exports: [
     RouterModule

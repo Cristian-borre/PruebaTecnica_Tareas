@@ -4,29 +4,13 @@
         class="bg-white w-96 h-96 border border-gray-400 rounded-2xl flex flex-col p-6 shadow-lg shadow-black/60">
         <div class="h-16 text-center text-2xl font-serif">Registrate</div>
         <div class="grow">
-            <div class="flex gap-6">
-                <div class="mb-6 grid content-center">
-                    <label for="InputNombre" class="block">Nombre</label>
-                    <input type="text" id="InputNombre" name="nombre"
-                        class="w-full shadow-md border border-gray-400 rounded-md outline-none p-1">
-                </div>
-                <div class="mb-6 grid content-center">
-                    <label for="InputApellido" class="block">Apellido</label>
-                    <input type="text" id="InputApellido" name="apellido"
-                        class="w-full shadow-md border border-gray-400 rounded-md outline-none p-1">
-                </div>
+            <div class="flex gap-6 mb-4">
+                <app-input label="Nombre" type="text" id="InputNombre"></app-input>
+                <app-input label="Apellido" type="text" id="InputApellido"></app-input>
             </div>
             <div class="flex gap-6">
-                <div class="mb-6 grid content-center">
-                    <label for="InputCorreo" class="block">Correo</label>
-                    <input type="text" id="InputCorreo" name="correo"
-                        class="w-full shadow-md border border-gray-400 rounded-md outline-none p-1">
-                </div>
-                <div class="">
-                    <label for="InputContraseña" class="block">Contraseña</label>
-                    <input type="password" id="InputContraseña" name="Contraseña"
-                        class="w-full shadow-md border border-gray-400 rounded-md outline-none p-1">
-                </div>
+                <app-input label="Correo" type="text" id="InputCorreo"></app-input>
+                <app-input label="Contraseña" type="password" id="InputContraseña"></app-input>
             </div>
         </div>
         <div class="h-24 text-center flex flex-col">
