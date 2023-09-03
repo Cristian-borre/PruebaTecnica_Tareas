@@ -11,4 +11,5 @@ export class InputComponent {
   @Input() value: string = '';
   @Input() name: string = '';
   @Input() id: string = '';
+  @Input() ngModelValue: any = '';
 }

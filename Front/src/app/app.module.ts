@@ -6,15 +6,16 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { InicioComponent } from './inicio/inicio.component';
-
 import { RouterModule, Routes } from '@angular/router';
 import { NavComponent } from './nav/nav.component';
 import { InputComponent } from './input/input.component';
 
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { PerfilComponent } from './perfil/perfil.component';
 import { CardComponent } from './card/card.component';
 import { ModalComponent } from './modal/modal.component';
+
+import { HttpClientModule } from '@angular/common/http';
 
 //Rutas
 const routes: Routes = [
@@ -40,7 +41,9 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ],
   exports: [
     RouterModule
