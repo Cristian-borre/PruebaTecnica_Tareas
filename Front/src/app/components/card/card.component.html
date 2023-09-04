@@ -1,0 +1,12 @@
+<div class="max-w-sm mb-6 rounded-lg w-96 sm:w-80 md:w-60 xl:w-64 h-52 border border-gray-300 bg-gray-100 overflow-hidden shadow-xl">
+    <div class="px-6 py-4 flex flex-col" card_id="card_id">
+        <div class="font-bold text-lg mb-3">{{titulo}}</div>
+        <p class="text-gray-700 text-base h-24 overflow-auto">{{descripcion}}</p>
+        <div class="mt-2 flex justify-end">
+            <button  [ngClass]="{
+                'bg-blue-500 hover:bg-blue-600': estado,
+                'bg-red-500 hover:bg-red-600': !estado
+              }" (click)="onUpdate(card_id)" class="py-1 px-3 text-white rounded-md">{{estado ? 'Completado' : 'Pendiente'}}</button>
+        </div>
+    </div>
+</div>

@@ -2,12 +2,10 @@
     <app-nav></app-nav>
     <div class="py-3 px-4 h-full overflow-auto">
         <app-modal></app-modal>
-        <div class="mt-4 overflow-auto w-full grid place-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-            <app-card titulo="Api back" estado="pendiente" descripcion="Crear api back con django rest framework y jwt."></app-card>
-            <app-card titulo="Vista perfil" estado="pendiente" descripcion="Crear la vista del perfil de los usuarios."></app-card>
-            <app-card titulo="Crear respositorio" estado="pendiente" descripcion="Crear repositorio donde podras subir el proyecto."></app-card>
-            <app-card titulo="Documentar codigo" estado="pendiente" descripcion="Documentar el codigo para mas entendimiento hacia otro desarrollador."></app-card>
-            <app-card titulo="Crear modales" estado="pendiente" descripcion="Crear modales el formulario de registro de tareas."></app-card>
+        <div class="mt-4 overflow-auto grid place-content-center grid-cols-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+            <div *ngFor="let card of cards">
+                <app-card [card_id]="card.id" [titulo]="card.titulo" [estado]="card.estado" [descripcion]="card.descripcion"></app-card>
+            </div>
         </div>
     </div>
 </div>

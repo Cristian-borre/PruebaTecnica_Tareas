@@ -7,22 +7,20 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { RouterModule, Routes } from '@angular/router';
-import { NavComponent } from './nav/nav.component';
-import { InputComponent } from './input/input.component';
+import { NavComponent } from './components/nav/nav.component';
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { PerfilComponent } from './perfil/perfil.component';
-import { CardComponent } from './card/card.component';
-import { ModalComponent } from './modal/modal.component';
+import { CardComponent } from './components/card/card.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { AuthGuard } from './auth.guard';
 
-//Rutas
+// Rutas
 const routes: Routes = [
   {path:'', component:LoginComponent},
   {path:'register', component:RegisterComponent},
-  {path:'inicio', component:InicioComponent},
-  {path:'perfil', component:PerfilComponent},
+  {path:'inicio', component:InicioComponent, canActivate: [AuthGuard]},
 ]
 
 @NgModule({
@@ -32,8 +30,6 @@ const routes: Routes = [
     RegisterComponent,
     InicioComponent,
     NavComponent,
-    InputComponent,
-    PerfilComponent,
     CardComponent,
     ModalComponent
   ],
